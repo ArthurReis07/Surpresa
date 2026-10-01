@@ -3,204 +3,265 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Convite para Alayne</title>
+<title>Convite Especial para Alayne</title>
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  font-family:Arial, sans-serif;
-  background:#eef5ec;
-  color:#26382e;
-  overflow: hidden;
+* {
+  box-sizing: border-box;
 }
-.card{
-  width:100%;
-  max-width:430px;
-  background:#fff;
-  border-radius:20px;
-  padding:32px 26px;
-  text-align:center;
-  box-shadow:0 8px 25px rgba(35,70,48,.10);
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #2e0c1b 0%, #11040a 100%);
+  color: #f3e5eb;
+  overflow-x: hidden;
 }
-.small{
-  color:#4d805f;
-  font-size:13px;
-  font-weight:bold;
-  letter-spacing:1px;
-  text-transform:uppercase;
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: #1c0a13;
+  border: 1px solid rgba(225, 98, 137, 0.25);
+  border-radius: 24px;
+  padding: 34px 26px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(184, 28, 85, 0.2);
 }
-h1{
-  margin:12px 0 8px;
-  font-family:Georgia,serif;
-  font-size:48px;
-  color:#285b3b;
-  font-weight:normal;
+
+.small {
+  color: #e06d88;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
-.intro{
-  margin:0 auto 25px;
-  line-height:1.6;
-  color:#65736a;
+
+h1 {
+  margin: 10px 0 12px;
+  font-family: 'Georgia', serif;
+  font-size: 46px;
+  color: #f1a3b8;
+  font-weight: normal;
+  text-shadow: 0 2px 10px rgba(241, 163, 184, 0.2);
 }
-.info{
-  border-top:1px solid #e5ece5;
-  border-bottom:1px solid #e5ece5;
-  padding:20px 0;
-  margin-bottom:22px;
+
+.intro {
+  margin: 0 auto 24px;
+  line-height: 1.6;
+  color: #cfa4b4;
+  font-size: 15px;
 }
-.item{
-  margin:14px 0;
+
+.info {
+  border-top: 1px solid rgba(225, 98, 137, 0.18);
+  border-bottom: 1px solid rgba(225, 98, 137, 0.18);
+  padding: 18px 0;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.label{
-  display:block;
-  font-size:12px;
-  color:#78917e;
-  margin-bottom:4px;
-  text-transform:uppercase;
-  letter-spacing:.7px;
+
+.item {
+  margin: 0;
 }
-.value{
-  font-size:19px;
-  font-weight:bold;
-  color:#294b35;
+
+.label {
+  display: block;
+  font-size: 11px;
+  color: #a87284;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.calendar{
-  background:#f5f9f3;
-  border-radius:14px;
-  padding:15px;
-  margin-bottom:22px;
+
+.value {
+  font-size: 17px;
+  font-weight: 600;
+  color: #f4cbd8;
 }
-.month{
-  font-weight:bold;
-  color:#356a47;
-  margin-bottom:12px;
-  text-transform:capitalize;
+
+.calendar {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(225, 98, 137, 0.15);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 22px;
 }
-.days{
-  display:grid;
-  grid-template-columns:repeat(7,1fr);
-  gap:3px;
-  font-size:12px;
+
+.month {
+  font-weight: 600;
+  color: #f1a3b8;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+  font-size: 15px;
 }
-.day{
-  padding:7px 2px;
-  border-radius:8px;
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  font-size: 12px;
+}
+
+.days strong {
+  color: #a87284;
+  padding-bottom: 4px;
+}
+
+.day {
+  padding: 8px 2px;
+  border-radius: 8px;
   transition: all 0.2s ease;
+  color: #e3becb;
 }
-.today{
-  background:#3d7850;
-  color:white;
-  font-weight:bold;
+
+.today {
+  background: #b81c55;
+  color: white;
+  font-weight: bold;
 }
+
 .past {
-  color: #b5c4ba;
+  color: #5c3b47;
   cursor: not-allowed;
 }
+
 .selectable {
   cursor: pointer;
 }
+
 .selectable:hover {
-  background: #d4e0d7;
+  background: rgba(225, 98, 137, 0.25);
+  color: #ffffff;
   transform: scale(1.1);
 }
+
 .selected {
-  background: #285b3b !important;
+  background: linear-gradient(135deg, #d81b60, #880e4f) !important;
   color: white !important;
   font-weight: bold;
   transform: scale(1.15) !important;
-  box-shadow: 0 4px 10px rgba(40,91,59,0.3);
+  box-shadow: 0 4px 15px rgba(216, 27, 96, 0.5);
 }
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:10px;
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
   position: relative;
-  min-height: 42px; 
+  min-height: 48px; 
 }
-button{
-  border:0;
-  border-radius:10px;
-  padding:12px 17px;
-  font-size:14px;
-  font-weight:bold;
-  cursor:pointer;
-  transition:.2s;
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
 }
-.yes{
-  background:#356d47;
-  color:white;
+
+.yes {
+  background: linear-gradient(135deg, #c2185b, #880e4f);
+  color: white;
   z-index: 2;
+  box-shadow: 0 4px 15px rgba(194, 24, 91, 0.35);
 }
-.yes:hover{background:#2b5c3a}
-.no{
-  background:#edf1ed;
-  color:#5e6b62;
+
+.yes:hover {
+  background: linear-gradient(135deg, #d81b60, #ad1457);
+}
+
+.no {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cfa4b4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: top 0.2s ease, left 0.2s ease;
   z-index: 100;
 }
-.message{
-  min-height:24px;
-  margin-top:16px;
-  font-size:14px;
-  color:#356d47;
-  font-weight:bold;
+
+.message {
+  min-height: 28px;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #f1a3b8;
+  font-weight: 600;
+  line-height: 1.4;
 }
-.footer{
-  margin-top:24px;
-  font-size:11px;
-  color:#9aa69d;
+
+.footer {
+  margin-top: 22px;
+  font-size: 11px;
+  color: #825363;
+  letter-spacing: 0.5px;
 }
-@media(max-width:430px){
-  h1{font-size:42px}
-  .card{padding:28px 21px}
+
+@media(max-width: 440px) {
+  body {
+    padding: 12px;
+  }
+  .card {
+    padding: 26px 18px;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  .value {
+    font-size: 15px;
+  }
+  button {
+    padding: 11px 16px;
+    font-size: 13px;
+  }
 }
 </style>
 </head>
 
 <body>
 <div class="card">
-  <div class="small">Um convite para você</div>
+  <div class="small">Um convite irrecusável</div>
 
   <h1>Alayne</h1>
 
   <p class="intro">
-    Pensei que seria uma boa ideia trocar mensagens por uma conversa pessoalmente.
-    E, de preferência, acompanhada de uma comida boa. :)
+    Pensei em uma noite perfeita pra nós dois: um ambiente calmo, vinho para relaxar, uma massagem bem gostosa, um bom jantar e um filme coladinhos. ✨
   </p>
 
   <div class="info">
     <div class="item">
-      <span class="label">Evento</span>
-      <span class="value">Jantar</span>
+      <span class="label">Programação</span>
+      <span class="value">🍷 Vinho + 💆‍♀️ Massagem + 🍝 Jantar + 🎬 Filme</span>
     </div>
 
     <div class="item">
       <span class="label">Local</span>
-      <span class="value">Manzuco</span>
+      <span class="value">Nosso Cantinho</span>
     </div>
   </div>
 
   <div class="calendar" id="calendar"></div>
 
   <div class="buttons">
-    <button class="yes" id="yes">Aceito o convite</button>
+    <button class="yes" id="yes">Aceito a noite perfeita</button>
     <button class="no" id="no">Vou pensar</button>
   </div>
 
   <div class="message" id="message"></div>
 
-  <div class="footer">O convite foi feito. Agora a resposta é com você. 🌿</div>
+  <div class="footer">O convite está feito. Agora é com você... 🥂✨</div>
 </div>
 
 <script>
 // ==========================================
 // INSIRA O SEU NÚMERO DE WHATSAPP AQUI ABAIXO:
-// Formato: 55 + DDD + Número (Apenas números)
-// Exemplo: 5573999999999
+// Formato: DDD + Número (Apenas números)
 const SEU_NUMERO_WHATSAPP = "73982027253"; 
 // ==========================================
 
@@ -212,8 +273,8 @@ const month = now.getMonth();
 const today = now.getDate();
 
 const monthName = now.toLocaleDateString("pt-BR", {
-  month:"long",
-  year:"numeric"
+  month: "long",
+  year: "numeric"
 });
 
 const week = ["D","S","T","Q","Q","S","S"];
@@ -224,9 +285,9 @@ let content = `<div class="month">${monthName}</div><div class="days">`;
 
 week.forEach(d => content += `<strong>${d}</strong>`);
 
-for(let i=0;i<firstDay;i++) content += "<span></span>";
+for(let i = 0; i < firstDay; i++) content += "<span></span>";
 
-for(let d=1; d<=totalDays; d++){
+for(let d = 1; d <= totalDays; d++){
   let extraClass = "";
   if(d < today) {
     extraClass = " past"; 
@@ -248,7 +309,7 @@ selectableDays.forEach(dayNode => {
     selectableDays.forEach(n => n.classList.remove('selected'));
     this.classList.add('selected');
     diaSelecionado = this.getAttribute('data-day');
-    message.textContent = `Dia ${diaSelecionado}? Perfeito. Confirme clicando em "Aceito o convite"! 👇`;
+    message.textContent = `Dia ${diaSelecionado}? Perfeito. Confirme essa noite especial clicando abaixo! 🍷✨`;
   });
 });
 
@@ -261,11 +322,11 @@ function victorySound(){
 
   const ctx = new AudioContext();
   const notes = [
-    [523.25,0.00,0.16], [659.25,0.16,0.16],
-    [783.99,0.32,0.16], [1046.50,0.48,0.42]
+    [523.25, 0.00, 0.16], [659.25, 0.16, 0.16],
+    [783.99, 0.32, 0.16], [1046.50, 0.48, 0.42]
   ];
 
-  notes.forEach(([freq,start,duration])=>{
+  notes.forEach(([freq, start, duration]) => {
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
 
@@ -283,7 +344,7 @@ function victorySound(){
     osc.stop(ctx.currentTime + start + duration + 0.03);
   });
 
-  setTimeout(()=>ctx.close(), 1500);
+  setTimeout(() => ctx.close(), 1500);
 }
 
 // --- CLIQUE NO BOTÃO DE ACEITAR E RETORNO VIA WHATSAPP ---
@@ -293,23 +354,23 @@ yes.onclick = () => {
   let textoWhatsapp = "";
 
   if (diaSelecionado) {
-    message.textContent = `Fechado! Redirecionando para o WhatsApp... 📲`;
-    textoWhatsapp = `Oi! Eu aceito o convite pro Manzuco! 😉 Podemos ir no dia ${diaSelecionado}. Que horas a gente se encontra?`;
+    message.textContent = `Fechado! Redirecionando para o WhatsApp... 🍷📲`;
+    textoWhatsapp = `Oi! Eu aceito essa noite perfeita! 🍷💆‍♀️ Vamos ter nossa massagem, vinho, jantar e filme no dia ${diaSelecionado}. Que horas a gente se encontra?`;
   } else {
-    message.textContent = `Fechado! Redirecionando para o WhatsApp... 📲`;
-    textoWhatsapp = `Oi! Eu aceito o convite pro Manzuco! 😉 Vamos marcar o dia e horário?`;
+    message.textContent = `Fechado! Redirecionando para o WhatsApp... 🍷📲`;
+    textoWhatsapp = `Oi! Eu aceito o convite para essa noite perfeita! 🍷💆‍♀️ Massagem, vinho, jantar e filme... vamos escolher o melhor dia?`;
   }
   
   yes.textContent = "Fechado! ✓";
   yes.style.transform = "scale(1.05)";
   no.style.display = "none";
   
-  setTimeout(()=>yes.style.transform="scale(1)",180);
+  setTimeout(() => yes.style.transform = "scale(1)", 180);
 
   // Redireciona para o WhatsApp após 2 segundos
   setTimeout(() => {
-    const url = `https://wa.me/${73982027253}?text=${encodeURIComponent(textoWhatsapp)}`;
-    window.location.href = url; // Usa location.href para funcionar bem no celular
+    const url = `https://wa.me/55${SEU_NUMERO_WHATSAPP}?text=${encodeURIComponent(textoWhatsapp)}`;
+    window.location.href = url;
   }, 2000);
 };
 
@@ -330,15 +391,14 @@ function fugirBotao(e) {
 no.addEventListener("mouseover", fugirBotao);
 no.addEventListener("touchstart", fugirBotao);
 
-// Se ela conseguir burlar o sistema e clicar em "Vou pensar"
+// Se ela conseguir clicar em "Vou pensar"
 no.onclick = () => {
-  message.textContent = "Nossa, você é ninja! 🥷 Mas o sistema não aceita 'Não'. Redirecionando... 😂";
+  message.textContent = "Nossa, você é rápida! 🥷 Mas o sistema não aceita 'Não'. Redirecionando... 😂";
   no.textContent = "Me pegou 😅";
   
-  // Ela é teimosa, mas manda mensagem no zap do mesmo jeito:
   setTimeout(() => {
-    const textoWhatsapp = "Ok, você me venceu no jogo do botão fujão! 😂 Vamos conversar sobre esse jantar.";
-    const url = `https://wa.me/${73982027253}?text=${encodeURIComponent(textoWhatsapp)}`;
+    const textoWhatsapp = "Ok, você me venceu no jogo do botão fujão! 😂 Vamos combinar esse vinho, jantar, massagem e filme.";
+    const url = `https://wa.me/55${SEU_NUMERO_WHATSAPP}?text=${encodeURIComponent(textoWhatsapp)}`;
     window.location.href = url;
   }, 2500);
 };
